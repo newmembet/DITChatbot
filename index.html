@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>デモサイト</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body style="position: relative;">
+        <header>
+            <h1>第一工科大学　東京上野キャンパス</h1>
+            <p>小林研究室へようこそ</p>
+        </header>
+        
+        <nav>
+            <a href="#about">学校紹介</a>
+            <a href="#news">ニュース</a>
+            <a href="#events">イベント</a>
+            <a href="#contact">お問い合わせ</a>
+        </nav>
+        
+        <section id="about">
+            <h2>学校紹介</h2>
+            <p>学校名は、未来のリーダーを育成するための最高水準の教育環境を提供しています。世界トップクラスのカリキュラムと教授陣を誇り、学生一人ひとりが自己の可能性を最大限に引き出せる場を提供します。</p>
+        </section>
+        
+        <section id="news">
+            <h2>最新ニュース</h2>
+            <ul>
+                <li>2024年10月1日: 新キャンパスが正式に開校しました。</li>
+                <li>2024年9月15日: 入学説明会が盛況に終わりました。</li>
+                <li>2024年8月25日: 夏季セミナーが無事終了しました。</li>
+            </ul>
+        </section>
+        
+        <section id="events">
+            <h2>今後のイベント</h2>
+            <ul>
+                <li>2024年11月3日: 学園祭</li>
+                <li>2024年12月10日: 卒業式</li>
+                <li>2025年1月15日: 入学試験</li>
+            </ul>
+        </section>
+        
+        <section id="contact">
+            <h2>お問い合わせ</h2>
+            <p>〒110-0005 東京都台東区上野7-7-4</p>
+            <p>電話番号: 03-3847-1391</p>
+        </section>
+        
+        <footer>
+            <p>© 2024 Daiichi Institute of Technology. All Rights Reserved.</p>
+        </footer>
+        
+        <script>
+            // スクロール時のアニメーション効果
+            window.addEventListener('scroll', function() {
+                const sections = document.querySelectorAll('section');
+                const triggerBottom = window.innerHeight * 0.85;
+        
+                sections.forEach(section => {
+                    const sectionTop = section.getBoundingClientRect().top;
+        
+                    if (sectionTop < triggerBottom) {
+                        section.classList.add('visible');
+                    } else {
+                        section.classList.remove('visible');
+                    }
+                });
+            });
+        </script>
+
+        <input type="checkbox" id="click" />
+    
+        <label for="click" style="position: fixed;">
+            <i class="fa-brands fa-telegram"></i>
+            <i class="fas fa-times"></i>
+        </label>
+    
+        <div class="wrapper" style="position: fixed;">
+            <div class="head-text">チャットボックス</div>
+            <div class="chat-box">
+                <div class="desc-text">
+                    学校への問い合わせ
+                </div>
+                <form action="#">
+                    <div class="field">
+                        <input type="text" placeholder="名前を入力してください" />
+                    </div>
+                    <div class="field">
+                        <input type="email" placeholder="メールアドレスを入力してください" />
+                    </div>
+                    <div class="field textarea">
+                        <textarea name="" id="" cols="30" rows="10" placeholder="ご質問を入力してください"></textarea>
+                    </div>
+                    <div class="field ">
+                        <button type="submit">送信</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
